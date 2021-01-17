@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
+	<!--<link rel="manifest" href="manifest.json">-->
+	<link rel="apple-touch-icon" href="https://blog.inago.info/cue_ss/image/icon_72.png" sizes="72x72">
+	<link rel="apple-touch-icon" href="https://blog.inago.info/cue_ss/image/icon_114.png" sizes="114x114">
+	<link rel="apple-touch-icon" href="https://blog.inago.info/cue_ss/image/icon_120.png" sizes="120x120">
+	<link rel="apple-touch-icon" href="https://blog.inago.info/cue_ss/image/icon_144.png" sizes="144x144">
+	<title>CUE!SSこんばーたー</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: ['Open+Sans:600']
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="app">
+		<div class="dropArea cursor-pointer w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 h-32 sm:h-32 md:h-32 lg:h-64 xl:h-64" @dragenter="dragEnter" @dragleave="dragLeave" @dragover.prevent @drop.prevent="dropFile" @click="selectFile" :class="{enter: flag_enter}">
+			<input type="file" multiple="multiple" class="hidden" ref="selectFile" accept="image/*" @change="inputFile">
+		</div>
+
+		<div id="previewArea" class="flex flex-wrap">
+		</div>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.dropArea{
+    display: flex;
+    background-color: rgba(0, 135, 238, 0.459);
+    justify-content: center;
+    align-items: center;
+    border: 5px dashed gray;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.dropArea::before{content: "クリックして画像選択 or スクショをドロップ";}
+
+.enter{
+    background-color:white;
+    border: 10px dotted #0087ee75;
+    color: gray;
+}
+
+#previewArea{
+    margin: 10px;
+}
+
+@media screen and (max-width:480px){
+    .dropArea{
+        display: flex;
+        background-color: rgba(0, 135, 238, 0.459);
+        justify-content: center;
+        align-items: center;
+        border: 5px dashed gray;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        color: white;
+        font-size: 12px;
+        font-family: 'Open Sans';
+        font-weight: bold;
+        text-align: center;
+        line-height: 150px;
+        cursor: pointer;
+    }
+
+    .dropArea::before{content: "タップして画像選択";}
+
+}
